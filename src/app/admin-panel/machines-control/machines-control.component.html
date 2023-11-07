@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-4" *ngFor="let building of buildingsData; let i = index">
+    <h2>{{ building.buildingName }}</h2>
+    <hr>
+    <div class="button-container">
+      <div class="button-row" *ngFor="let machine of building.machines">
+        <div class="larger-button" [ngClass]="{'card-body': machine.isConnected, 'card-body-off': !machine.isConnected}">
+          <div class="button-content">
+            <img *ngIf="machine.isConnected" src="../../../assets/images/maquinaLavar.svg" class="button-icon" />
+            <img *ngIf="!machine.isConnected" src="../../../assets/images/maquinaLavarDesconectada.svg" class="button-icon" />
+            <span class="button-text">{{ machine.name }}</span>
+            <div class="row">
+              <div class="col-md-6" style="display: flex; align-items: center;">
+                <p class="card-text" [class.free-machine]="!machine.is_in_use" [class.in-use-machine]="machine.is_in_use">
+                  <ng-container *ngIf="machine.is_in_use; else notInUse">
+                    {{ machine.apt_in_use }}
+                  </ng-container>
+                  <ng-template #notInUse>
+                    Livre
+                  </ng-template>
+                </p>
+              </div>
+              <div class="col-md-6">
+                <button class="btn buttonActionLigar mt-4" [ngClass]="{'buttonActionLigar': !machine.is_in_use, 'buttonActionDesligar': machine.is_in_use}" (click)="mudarEstadoMaquina(machine)">
+                  {{ machine.is_in_use ? "Desligar" : "Ligar" }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

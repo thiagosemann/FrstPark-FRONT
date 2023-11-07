@@ -1,0 +1,22 @@
+/* O CSS permanece o mesmo */
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.h-custom {
+  height: 100%;
+}
+
+
+.invalid {
+  border: 2px solid red;
+}
+/* Add this to your existing CSS styles */
+.scrollable-container {
+  max-height: 100vh; /* Adjust the value as needed */
+  overflow-y: auto;
+}

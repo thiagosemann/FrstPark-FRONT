@@ -1,0 +1,70 @@
+.button-container {
+    background: white;
+    border-radius: 15px;
+    padding: 10px; /* Espaço em volta dos botões */
+    display: flex; /* Usar Flexbox */
+    flex-wrap: wrap; /* Quebrar linha quando não houver espaço suficiente */
+    justify-content: flex-start; /* Alinhar os botões à esquerda */
+    align-items: center; /* Alinhar os botões verticalmente */
+    flex-grow: 1; /* Ocupar todo o espaço disponível na direção do eixo principal */
+    height: 200px;
+    overflow: hidden;
+}
+
+.larger-button {
+    background-color: #f6f6f6; /* Sem cor de fundo */
+    border-radius: 15px;
+    color: #7B7B84; /* Texto em branco */
+    padding: 10px; /* Espaçamento em volta do conteúdo (reduzido) */
+    transition: transform 0.3s ease; /* Transição para efeito de hover */
+    font-family: 'LayarBahtera Doomsday';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px; /* Tamanho da fonte ligeiramente reduzido */
+    line-height: 20px; /* Altura da linha ligeiramente reduzida */
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+/* Adicione uma classe para controlar o número de colunas em telas menores */
+@media (min-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.button-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-icon {
+    width: 80px; /* Reduz a largura da imagem */
+    height: 80px; /* Reduz a altura da imagem */
+    margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.button-text {
+    font-size: 14px; /* Tamanho da fonte ligeiramente reduzido */
+}
+
+.buttonActionLigar {
+    background-color: #D9D9D9;
+    color: #0E7F3B;
+    font-weight: 500;
+    font-size: 12px; /* Tamanho da fonte reduzido */
+    height: 24px; /* Altura do botão reduzida */
+    padding: 3px 8px; /* Espaçamento interno do botão reduzido */
+}
+
+.buttonActionDesligar {
+    background-color: #FF4B26;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 12px; /* Tamanho da fonte reduzido */
+    height: 24px; /* Altura do botão reduzida */
+    padding: 3px 8px; /* Espaçamento interno do botão reduzido */
+}

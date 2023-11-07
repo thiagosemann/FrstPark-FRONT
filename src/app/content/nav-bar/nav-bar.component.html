@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg sticky-top">
+  <a class="navbar-brand" href="#">
+    <img src="../../../assets/images/logo-lamp.svg" alt="Logo Lamp" class="logo" width="150" height="70">
+    <img src="../../../assets/images/logo-name.svg" alt="Logo Name" class="logo" width="100" height="60">
+  </a>
+
+  <div class="navbar-nav ms-auto" *ngIf="isDesktopView">
+    <button class="navbar-perfil-btn" (click)="content()"><i class="fas fa-home"></i> Home</button>
+    <ng-container *ngIf="this.user.role === 'admin' || this.user.role === 'sindico' ">
+      <button class="navbar-perfil-btn" (click)="admin()"><i class="fas fa-gear"></i> Admin</button>
+    </ng-container>
+    <button class="navbar-perfil-btn" (click)="profile()"><i class="fas fa-user"></i> Perfil</button>
+    <button class="navbar-logout-btn" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Sair</button>
+  </div>
+
+  <!-- Botão para abrir o menu (menu sanduíche) -->
+  <div class="menu-wrapper">
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu contendo os botões "Perfil" e "Sair" -->
+    <div class="navbar-menu" *ngIf="isMenuOpen && !isDesktopView">
+      <button class="navbar-perfil-btn" (click)="content()"><i class="fas fa-home"></i> Home</button>
+      <button class="navbar-perfil-btn" (click)="usuarios()"><i class="fas fa-gear"></i> Usuários</button>
+      <button class="navbar-perfil-btn" (click)="predios()"><i class="fas fa-gear"></i> Prédios</button>
+      <ng-container *ngIf="this.user.role === 'admin' || this.user.role === 'sindico' ">
+        <button class="navbar-perfil-btn" (click)="maquinas()"><i class="fas fa-gear"></i> Máquinas</button>
+      </ng-container>
+      <button class="navbar-perfil-btn" (click)="profile()"><i class="fas fa-user"></i> Perfil</button>
+      <button class="navbar-logout-btn" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Sair</button>
+    </div>
+  </div>
+</nav>

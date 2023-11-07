@@ -1,0 +1,82 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.container-fluid {
+    max-width: 100%;
+}
+
+.vh-100 {
+    height: 100vh;
+}
+
+.h-custom {
+    height: calc(100% - 60px);
+}
+
+.form-outline {
+    margin-bottom: 1.5rem;
+}
+
+.form-outline input[type=email],
+.form-outline input[type=password] {
+    border-color: #d1d1d1;
+    box-shadow: none;
+}
+
+.form-outline input[type=email]:focus,
+.form-outline input[type=password]:focus {
+    border-color: #0E7F3B;
+    box-shadow: 0 0 0 0.2rem #1df774;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success:hover {
+    background-color: #146c43;
+    border-color: #146c43;
+}
+@media screen and (max-width: 768px) {
+    .login-image {
+      display: none !important;
+    }
+    .logo {
+        max-width: 150px; /* Ajuste o tamanho do logo para telas menores */
+        margin-top: -20px; /* Ajuste o valor do espaçamento superior conforme necessário */
+      }
+  }
+
+  .logo {
+    max-width: 200px; /* Ajuste o tamanho do logo conforme necessário */
+  }
+  
+.rounded-image {
+    border-radius: 15px;
+  }
+.position-relative {
+    position: relative;
+}
+.position-absolute {
+    position: absolute;
+}
+
+.input-with-icon {
+    padding-left: 40px !important;
+}
+.btn-Login{
+    background-color: #0E7F3B;
+    color:white;
+    font-size: 1.5em;
+    width: 100%;
+}
+.input-lg {
+    height: 80px;
+    border-radius: 5px;
+}
+.form-check-input:checked {
+    background-color: #0E7F3B;
+    border-color: #0E7F3B;
+}

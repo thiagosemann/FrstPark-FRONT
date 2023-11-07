@@ -1,0 +1,105 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.section-title {
+    text-align: center;
+    color: #007BFF;
+    padding: 20px 0;
+}
+
+/* Cabeçalho */
+.header {
+    background: #007BFF;
+    padding: 20px 0;
+}
+
+.logo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Seção introdutória */
+.intro {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.main-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Seção de benefícios */
+.benefits {
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+.benefit {
+    margin-bottom: 30px;
+}
+
+.benefit-title {
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+/* Seção de responsabilidades */
+.responsibilities {
+    padding: 50px 0;
+}
+
+/* CTA */
+.cta {
+    background: #007BFF;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cta-button {
+    background: #fff;
+    color: #007BFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.cta-button:hover {
+    background: #ccc;
+}
+.navbar {
+    margin-bottom: 20px;
+  }
+  
+  .navbar-brand {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .navbar-nav li {
+    padding: 0 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ccc;
+  }
+  
+  .navbar-nav .active {
+    color: #ffd700;
+  }

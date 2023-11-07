@@ -1,0 +1,89 @@
+.container {
+  background: #F6F6F6;
+  border-radius: 15px;
+}
+
+.table-light-gray {
+  background-color: #F6F6F6; /* Replace with your desired light green color */
+}
+
+.table-light {
+  background-color: white; /* Replace with your desired background color */
+}
+
+.table-wrapper {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f8f9fa;
+  color: #494A50;
+  font-family: 'LayarBahtera Doomsday';
+}
+
+.table-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color: #B7B7B7;
+  border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.table tr,
+.table td,
+.table th {
+  border: none;
+}
+.gasto-mes{
+  font-family: 'LayarBahtera Doomsday';
+  font-style: normal;
+  font-weight: 550;
+  font-size: 25px;
+  color: #7B7B84; /* White text */
+  margin-top:10px;
+}
+
+.log-gastos-title {
+  font-family: 'LayarBahtera Doomsday';
+  font-style: normal;
+  font-weight: 550;
+  font-size: 25px;
+  color: #7B7B84; /* White text */
+  margin-top:10px;
+
+}
+/* Add this media query to target screens with a maximum width of 600px (mobile devices) */
+/* Add this media query to target screens with a minimum width of 601px (desktop screens) */
+@media (min-width: 601px) {
+  .desktop-only {
+    display: table-cell;
+  }
+}
+
+/* Add this media query to target screens with a maximum width of 600px (mobile devices) */
+@media (max-width: 600px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .log-gastos .container {
+    /* Adjust the desired height for the log-gastos component on mobile devices */
+    height: 700px; /* You can change this value as needed */
+    overflow-y: auto; /* Add scroll functionality if content overflows */
+  }
+
+  .table-wrapper {
+    /* Adjust the max-height to fit the available space within the container */
+    max-height: 500px; /* You can change this value as needed */
+    overflow-y: auto; /* Add scroll functionality if content overflows */
+  }
+}

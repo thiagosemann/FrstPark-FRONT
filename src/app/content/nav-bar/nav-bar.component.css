@@ -1,0 +1,87 @@
+/* CSS da navbar */
+.navbar {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* CSS para o nome da empresa */
+.company-name {
+    font-size: 24px;
+    color: #333; /* Altere conforme necessário */
+}
+
+/* CSS para o botão de saída */
+.navbar-logout-btn {
+    background-color: white;
+    color: #006400;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    padding: 5px 20px;
+}
+
+/* Efeito de hover no botão de saída */
+.navbar-logout-btn:hover {
+    background-color: lightgray;
+}
+.navbar-perfil-btn {
+    background-color: white;
+    color: #006400;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    padding: 5px 5px;
+}
+
+/* Efeito de hover no botão de saída */
+.navbar-perfil-btn:hover {
+    background-color: lightgray;
+}
+
+/* Posicionamento do menu sobreposto */
+/* Posicionamento do menu sobreposto */
+.menu-wrapper {
+    position: relative;
+}
+
+.navbar-menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinhar o conteúdo à esquerda */
+    min-width: 150px;
+    z-index: 999;
+}
+
+/* Estilos para os botões dentro do menu */
+.navbar-menu button {
+    background-color: white;
+    color: #006400;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-bottom: 5px;
+    padding: 5px 20px;
+    text-align: left; /* Alinhamento do texto à esquerda */
+    width: 100%; /* Ocupar toda a largura do menu */
+}
+
+.navbar-menu button:hover {
+    background-color: lightgray;
+}

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Resumo Mensal</h2>
+        <div >
+          <select><option>Janeiro</option></select> 
+          <label style="margin-left: 10px;"> Valores Mensais</label>         
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div >
+        <canvas id="chartCanvas"  baseChart
+                [datasets]="chartData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [legend]="chartLegend"
+                >
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+

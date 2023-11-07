@@ -1,0 +1,23 @@
+<div class="sidebar">
+  <nav class="navbar navbar-expand-sm  flex-column">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" (click)="selecionarRota('buildings')">Empreendimentos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" (click)="selecionarRota('userControl')">Controle usuário</a>
+        </li>
+        <ng-container *ngIf="this.user.role === 'admin'">
+          <li class="nav-item">
+            <a class="nav-link" (click)="selecionarRota('machinesControl')">Máquinas</a>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </nav>
+</div>

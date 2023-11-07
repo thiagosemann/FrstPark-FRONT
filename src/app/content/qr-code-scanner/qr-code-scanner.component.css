@@ -1,0 +1,33 @@
+.scanner-wrapper.rounded {
+    border-radius: 15px;
+  }
+  /* Estilos personalizados para o botão personalizado */
+.custom-button {
+    background-color: #006400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .custom-button:hover {
+    background-color: #45a049;
+  }
+  
+  .custom-button:focus {
+    outline: none;
+  }
+  
+  .spinner-custom {
+    color: #45a049; /* Substitua pela cor desejada */
+    width: 5rem;
+    height: 5rem;
+    border-width: 0.5em;
+  }
+  
+  .spinner-custom::after {
+    border-color: #45a049; /* Substitua pela cor desejada */
+  }
+  

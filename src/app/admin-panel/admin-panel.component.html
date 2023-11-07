@@ -1,0 +1,27 @@
+<div class="main-layout">
+    <app-nav-bar class="mb-4"></app-nav-bar>
+    <div class="content-wrapper">
+        <div class="sidebar">
+            <app-menu-lateral (componenteSelecionado)="onComponenteSelecionado($event)"></app-menu-lateral>
+        </div>        
+        <div class="app-content container-fluid d-flex flex-column">
+            <div class="row flex-grow-1 mobile-block"> <!-- Primeiro bloco -->
+                <div class="col-12 d-flex ">
+                    <div class="col text-center  ">
+                        <div class="row">
+                            <ng-container *ngIf="componenteAtual === 'buildings'">
+                               <app-buildings-control></app-buildings-control>
+                            </ng-container>
+                            <ng-container *ngIf="componenteAtual === 'userControl'">
+                                <app-user-control></app-user-control>
+                            </ng-container>
+                            <ng-container *ngIf="componenteAtual === 'machinesControl'">
+                                <app-machines-control></app-machines-control>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

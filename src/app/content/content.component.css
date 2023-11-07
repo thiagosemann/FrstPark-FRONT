@@ -1,0 +1,138 @@
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.app-nav-bar {
+    z-index: 1000;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.app-content {
+    margin-left: 50px;
+    margin-right: 20px;
+    overflow: hidden;
+    flex-grow: 1;
+    width: calc(100% - 250px);
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* Regra de mídia para telas de 600px ou menos */
+@media (max-width: 600px) {
+    .main-layout {
+        overflow: auto;
+    }
+
+    .main-layout.row {
+        flex-direction: column;
+    }
+
+    .app-content {
+        overflow: hidden;
+        margin-left: 20px;
+    }
+
+    .rectangle {
+        flex-direction: column;
+    }
+
+    /* Adicione esta regra para esconder a barra lateral em telas menores que 600px */
+    .sidebar {
+        display: none;
+    }
+}
+
+.button-container {
+    background: #F6F6F6;
+    border-radius: 15px;
+    padding: 10px; /* Space around the button */
+    margin: 10px; /* Space between the buttons */
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+    height: 100%; /* Take full height of the parent element */
+}
+
+.terceiroBloco-container {
+    border-radius: 15px;
+    overflow-y: auto; /* Add this to enable vertical scrolling */
+    height: 100%; /* Take full height of the parent element */
+}
+
+.larger-button {
+    background-color: transparent; /* No background */
+    border: none; /* No border */
+    color: #7B7B84; /* White text */
+    display: flex; /* Align image and text */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center the contents */
+    justify-content: center; /* Center the contents */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding around the content */
+    transition: transform 0.3s ease; /* Transition for hover effect */
+    font-family: 'LayarBahtera Doomsday';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.larger-button:hover {
+    transform: scale(1.1); /* Make the button slightly larger when hovering */
+}
+
+.faturaMensal{
+    background-color: transparent; /* No background */
+    border: none; /* No border */
+    display: flex; /* Align image and text */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center the contents */
+    justify-content: center; /* Center the contents */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding around the content */
+}
+.faturaMensalValor{
+    font-family: 'LayarBahtera Doomsday';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0E7F3B; /* White text */
+
+}
+.faturaMensalDescricao{
+    font-family: 'LayarBahtera Doomsday';
+    color: #7B7B84; /* White text */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    margin-top:15px;
+}
+
+.button-icon {
+    width: 100px; /* Width of the image */
+    height: 100px; /* Height of the image */
+    margin-bottom: 10px; /* Space between the image and the text */
+}

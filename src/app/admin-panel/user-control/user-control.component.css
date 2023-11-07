@@ -1,0 +1,123 @@
+@media (max-width: 600px) {
+    .main-layout {
+        overflow: hidden;
+    }
+
+    .main-layout.row {
+        flex-direction: column;
+    }
+
+    .app-content {
+        overflow: auto;
+        margin-left: 10px;
+    }
+
+    .rectangle {
+        flex-direction: column;
+    }
+
+    /* Adicione esta regra para esconder a barra lateral em telas menores que 600px */
+    .sidebar {
+        display: none;
+    }
+    .hidden-small-screen {
+      display: none;
+    }
+      /* Adicione uma classe à sua tabela para aplicar estilos específicos */
+    .narrow-table {
+      margin: 0; /* Remova as margens */
+    }
+
+    /* Se quiser, você pode ajustar a largura das colunas individualmente */
+    .narrow-table th,
+    .narrow-table td {
+      padding: 5px; /* Ajuste o preenchimento conforme necessário */
+    }
+}
+
+  /* Adicione margem antes do select */
+  .container {
+    padding: 10px; /* Ajuste o preenchimento conforme necessário */
+  }
+
+  .table-light-gray {
+    background-color: #F6F6F6; /* Replace with your desired light green color */
+  }
+  
+  .table-light {
+    background-color: white; /* Replace with your desired background color */
+  }
+  
+  .table-wrapper {
+    max-height: 680px; /* You can change this value as needed */
+    overflow-y: auto; /* Add scroll functionality if content overflows */
+  }
+  
+  .table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #f8f9fa;
+    color: #494A50;
+    font-family: 'LayarBahtera Doomsday';
+  }
+  
+  .table-wrapper::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #B7B7B7;
+    border-radius: 4px;
+  }
+  
+  .table-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  .table tr,
+  .table td,
+  .table th {
+    border: none;
+    font-size: 14px;
+  }
+
+
+  /* Style the input elements */
+  input[type="text"],
+  input[type="number"],
+ 
+
+  /* Optionally, you can add some margin between inputs for better spacing */
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] + input[type="text"],
+  input[type="number"] + input[type="text"],
+  input[type="date"] + input[type="number"] {
+    margin-bottom: 8px; /* Adjust the margin as needed */
+  }
+
+
+
+/* O CSS permanece o mesmo */
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.h-custom {
+  height: 100%;
+}
+
+
+.invalid {
+  border: 2px solid red;
+}
+/* Add this to your existing CSS styles */
+.scrollable-container {
+  max-height: 85vh; /* Adjust the value as needed */
+  overflow-y: auto;
+}

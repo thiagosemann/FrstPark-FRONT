@@ -1,0 +1,92 @@
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.h-custom {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .h-custom {
+    height: calc(100% - 112px);
+  }
+}
+
+.invalid {
+  border: 2px solid red;
+}
+
+/* Additional CSS for the profile page */
+.profile-info {
+  border: 2px solid #ccc;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-family: 'LayarBahtera Doomsday';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  background-color: white;
+}
+
+.seuPerfil {
+  font-family: 'LayarBahtera Doomsday';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: #7B7B84;
+}
+
+.profile-text {
+  color:#7B7B84; /* Set the user's name color to gray */
+  font-style: normal;
+  font-weight: 500;
+  border-color: transparent;
+}
+
+/* Adicionando layout flexível para posicionar o input ao lado do <strong> */
+.profile-row {
+  display: flex;
+  align-items: center;
+}
+
+/* Adicionando margem entre o <strong> e o input */
+.profile-row strong {
+  margin-right: 10px;
+  white-space: nowrap; /* Impede a quebra do texto em várias linhas */
+}
+
+/* Ajustando o box-sizing para acomodar a borda na largura total do elemento */
+.profile-row input {
+  box-sizing: border-box;
+}
+
+.btn-custom{
+  background-color: #0E7F3B;
+  color: white;
+  font-weight: 600;
+  margin-top: 25px;
+  font-size: 22px;
+}
+/* Rounded profile image */
+.form-rounded {
+  border-radius: 3%;
+}
+
+/* Custom border for the form */
+.custom-border {
+  border: 2px solid #D9D9D9; /* Replace YourBorderColor with your desired color */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Custom background color for the form */
+.custom-background {
+  background-color: white; /* Replace YourBackgroundColor with your desired color */
+}
+
+

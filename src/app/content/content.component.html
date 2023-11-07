@@ -1,0 +1,43 @@
+<div class="main-layout">
+    <app-nav-bar class="mb-4"></app-nav-bar>
+    <div class="content-wrapper">      
+        <div class="app-content container-fluid d-flex flex-column">
+            <div class="row flex-grow-1 mobile-block"> <!-- Primeiro bloco -->
+                <div class="col-12 d-flex rectangle">
+                    <div class="col text-center button-container">
+                        <button class="larger-button" (click)="goToQrCode()">
+                            <img src="../../assets/images/qr-code.svg" alt="QR Code" class="button-icon"/>
+                            <span>LER QR CODE</span>
+                        </button>
+                    </div>
+                    <div class="col text-center button-container ">
+                        <div class="row">
+                            <div class="col-12 faturaMensalValor mt-4">
+                                <span>R$ {{valorTotal | number:'.2-2'}}</span>
+                            </div>  
+                            <div class="col-12 faturaMensalDescricao">
+                                <span>Fatura para o mês de {{ mesAtual }}</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-grow-1 mobile-block d-flex justify-content-center align-items-center"> <!-- Segundo bloco -->
+                <div class="col-12">
+                    <app-status-maquinas></app-status-maquinas>
+                </div>
+            </div>
+            <div class="row flex-grow-1 mobile-block"> <!-- Terceiro bloco -->
+                <div class="col-12 d-flex rectangle">
+                    <div class="col text-center terceiroBloco-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <app-log-gastos></app-log-gastos>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
