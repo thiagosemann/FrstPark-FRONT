@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { GerenciadorMaquinasService } from '../shared/service/gerenciadorMaquinas';
 import { User } from '../shared/utilitarios/user';
-import { UsageHistoryService } from '../shared/service/usageHistory_service';
 
 @Component({
   selector: 'app-content',
@@ -15,9 +13,8 @@ export class ContentComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private gerenciadorMaquinasService: GerenciadorMaquinasService,
     private route: ActivatedRoute,
-    private usageHistoryService: UsageHistoryService
+
   ) {}
 
   ngOnInit(): void {
@@ -27,7 +24,6 @@ export class ContentComponent implements OnInit {
       this.router.navigate(['/login']);
     }
 
-    this.verificarMaquinas();
 
     this.mesAtual = this.obterMesAtual();
 
@@ -38,16 +34,10 @@ export class ContentComponent implements OnInit {
       const year = today.getFullYear();
       const month = today.getMonth() + 1; // Adiciona 1 ao mês (pois os meses em JavaScript são baseados em zero)
       const monthConsulta = `${year}-${month.toString().padStart(2, '0')}`;
-      this.obterHistoricoUsoUsuario(user.id, monthConsulta);
     }
   }
 
-  verificarMaquinas(): void {
-    const id = this.route.snapshot.paramMap.get('id') ?? '';
-    if (id) {
-      this.gerenciadorMaquinasService.verificacaoMaquinas(id);
-    }
-  }
+
 
   obterMesAtual(): string {
     const currentDate = new Date();
@@ -73,24 +63,12 @@ export class ContentComponent implements OnInit {
     return null;
   }
 
-  obterHistoricoUsoUsuario(userId: number, month: string): void {
-    this.usageHistoryService.getUserUsageHistory(userId, month)
-      .subscribe({
-        next: history => {
-          this.calcularValorTotal(history);
-        },
-        error: error => {
-          console.log('Error getting user usage history:', error);
-        }
-      });
-  }
+
 
   calcularValorTotal(history: any[]): void {
     this.valorTotal = history.reduce((total, item) => total + Number(item.total_cost), 0);
   }
   
 
-  goToQrCode(): void {
-    this.router.navigate(['/qrCode']);
-  }
+
 }
