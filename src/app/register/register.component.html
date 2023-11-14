@@ -1,0 +1,98 @@
+<div class="scrollable-container">
+
+    <section class="vh-100">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-8 col-lg-6 col-xl-5">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="p-4 p-md-5 border rounded bg-light">
+              <h2 class="text-center mb-4">Registro FRST</h2>
+              
+              <!-- Nome e Sobrenome na mesma linha -->
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="first_name">Primeiro Nome:</label>
+                    <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Primeiro nome" formControlName="first_name" required/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="last_name">Sobrenome:</label>
+                    <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Sobrenome" formControlName="last_name" required/>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- CPF e Telefone na mesma linha -->
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="cpfInput">CPF:</label>
+                    <input type="text" id="cpfInput" name="cpfInput" class="form-control" placeholder="Insira seu CPF" formControlName="cpf"  mask="000.000.000-00" required/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" class="form-control" placeholder="Insira seu telefone" formControlName="telefone" mask="(00) 00000-0000" required/>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="birthDate">Data de Nascimento:</label>
+                    <input type="date" id="birthDate" name="birthDate" class="form-control" formControlName="data_nasc" required/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="apt_name">Nome do Apartamento:</label>
+                    <input type="text" id="apt_name" name="apt_name" class="form-control" placeholder="Apt 54" formControlName="apt_name" required/>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Email e Confirmar Email na mesma linha -->
+              <div formGroupName="emailGroup" class="row mb-3">
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="email">Endereço de e-mail:</label>
+                    <input type="email" id="email" name="email" class="form-control" [class.invalid]="registerForm.get('emailGroup')?.errors?.['mismatch']" placeholder="Insira um e-mail válido" formControlName="email" required autocomplete="username"/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="confirmEmail">Confirme o e-mail:</label>
+                    <input type="email" id="confirmEmail" name="confirmEmail" class="form-control" [class.invalid]="registerForm.get('emailGroup')?.errors?.['mismatch']" placeholder="Confirme o e-mail inserido" formControlName="confirmEmail" required/>
+                  </div>
+                </div>
+              </div>
+              <!-- Senha e Confirmar Senha na mesma linha -->
+              <div formGroupName="passwordGroup" class="row mb-3">
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="password">Senha (Mínimo 4 Caracteres):</label>
+                    <input type="password" id="password" name="password" placeholder="Digite a senha" formControlName="password" required
+                    class="form-control ng-invalid ng-dirty ng-touched" autocomplete="new-password">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="confirmPassword">Confirme a senha:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" [class.invalid]="registerForm.get('passwordGroup')?.errors?.['mismatch']" placeholder="Confirme a senha" formControlName="confirmPassword" required/>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="text-center text-md-start mt-4 pt-2">
+                <button type="submit" class="btn btn-success btn-lg px-4">Registrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    

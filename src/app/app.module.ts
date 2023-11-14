@@ -19,6 +19,7 @@ import { NavBarComponent } from './content/nav-bar/nav-bar.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 import { ProfileComponent } from './content/profile/profile.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProfileComponent } from './content/profile/profile.component';
     NavBarComponent,
     ForgotPasswordComponent,
     ProfileComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
