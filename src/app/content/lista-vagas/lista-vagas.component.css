@@ -1,0 +1,52 @@
+/* vagas-garagem.component.css */
+.ordenar-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .ordenar-container label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .seta {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  /* vagas-garagem.component.css */
+  .vagas-container {
+    overflow-y: auto; /* Adicione esta linha para permitir o scroll vertical */
+    max-height: 600px; /* ajuste a altura máxima conforme necessário */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  
+  .vaga-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .vaga-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .vaga-item img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .vaga-info {
+    margin-top: 10px;
+  }
+  
+  /* Adicione mais estilos conforme necessário */
+  

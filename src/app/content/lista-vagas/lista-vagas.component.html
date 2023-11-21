@@ -1,0 +1,35 @@
+<!-- vagas-garagem.component.html -->
+<div class="filtro-container">
+    <div class="row">
+      <div class="col-md-3 mb-2">
+        <label for="dataInicio">Data de Início:</label>
+        <input type="date" id="dataInicio" [(ngModel)]="filtroDataInicio" class="form-control">
+      </div>
+      <div class="col-md-3 mb-2">
+        <label for="dataFim">Data de Fim:</label>
+        <input type="date" id="dataFim" [(ngModel)]="filtroDataFim" class="form-control">
+      </div>
+    </div>
+  </div>
+  
+<!-- vagas-garagem.component.html -->
+<div class="ordenar-container text-right"> <!-- Adicione a classe text-right -->
+    <label for="ordenar">Ordenar por preço:</label>
+    <div class="seta" (click)="alternarOrdenacao()">
+      <i class="fas" [ngClass]="{'fa-arrow-up': ordenacaoAsc, 'fa-arrow-down': !ordenacaoAsc}"></i>
+    </div>
+</div>
+  
+  
+  <div class="vagas-container">
+    <div *ngFor="let vaga of filtrarVagas() | ordenarPorPreco: ordenacaoAsc" class="vaga-item">
+      <img [src]="vaga.foto" alt="Foto da vaga">
+      <div class="vaga-info">
+        <h3>{{ vaga.descricao }}</h3>
+        <p>{{ vaga.detalhes }}</p>
+        <p>Valor: R$ {{ vaga.valor | number:'1.2-2' }}</p>
+        <!-- Adicione mais detalhes conforme necessário -->
+      </div>
+    </div>
+  </div>
+  

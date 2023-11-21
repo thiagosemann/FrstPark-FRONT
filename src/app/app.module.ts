@@ -9,6 +9,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NgChartsModule } from 'ng2-charts';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { OrdenarPorPrecoPipe } from '../app/shared/pipes/ordenar-por-preco.pipe'; // ajuste o caminho conforme necessário
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 
 import { ProfileComponent } from './content/profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { ListaVagasComponent } from './content/lista-vagas/lista-vagas.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { RegisterComponent } from './register/register.component';
     ForgotPasswordComponent,
     ProfileComponent,
     RegisterComponent,
+    ListaVagasComponent,
+    OrdenarPorPrecoPipe
   ],
   imports: [
     BrowserModule,
